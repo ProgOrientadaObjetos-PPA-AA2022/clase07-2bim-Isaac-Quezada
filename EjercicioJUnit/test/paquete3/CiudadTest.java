@@ -43,10 +43,10 @@ public class CiudadTest {
     public void testEstablecerNombres() throws NoSuchFieldException, 
             IllegalArgumentException, 
             IllegalAccessException {
-        System.out.println("establecerNombre");
+        System.out.println("establecerNombres");
         String nom = "Loja";
         instance.establecerNombre(nom);
-        Field field = instance.getClass().getDeclaredField("nombre");
+        Field field = instance.getClass().getDeclaredField("nombres");
         field.setAccessible(true);
         assertEquals(field.get(instance), "Loja");
     }
